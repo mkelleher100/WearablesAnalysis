@@ -20,6 +20,23 @@ For each record it is provided:
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 
+##Analysis
+run_analysis.R begins by reading the following data sets from the UCI HAR Dataset into :
+
+activity_labels.txt
+features.txt
+X_test.txt
+y_test.txt
+subject_test.txt
+X_train.txt
+y_train.txt
+subject_train.txt
+The first level of processing merges the table, applies appropriate variable names, and adds descriptive activity names. This is stored in a data frame: data
+
+The second level of processing extracts only the means and standard deviation variable. This is stored in a data frame: extractedData.
+
+The final level of processing summarizes the average of each variable in the extracted data by Subject ID and Activity. This is stored in data frame: tidy
+
 ## Variables in Tidy Data Set 
 
 "column.names" | "class" | "range" | "mean"
